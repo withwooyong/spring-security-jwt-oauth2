@@ -27,19 +27,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     UserDetailsService users() {
-        UserDetails user1 = User.builder()
-                .username("user1")
-                .password(passwordEncoder().encode("1234"))
+        UserDetails user = User.builder()
+                .username("user")
+                .password(passwordEncoder().encode("password"))
                 .roles("USER")
                 .build();
 
         UserDetails admin = User.builder()
                 .username("admin")
-                .password(passwordEncoder().encode("1234"))
+                .password(passwordEncoder().encode("password"))
                 .roles("ADMIN")
                 .build();
 
-        return new InMemoryUserDetailsManager(user1, admin);
+        return new InMemoryUserDetailsManager(user, admin);
     }
 
     @Bean
@@ -62,5 +62,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     });
                 })
         ;
+        http.logout()
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID");
     }
 }

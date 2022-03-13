@@ -12,11 +12,10 @@ import org.springframework.stereotype.Service;
 public class SpOidcUserService extends OidcUserService {
     @Override
     public OidcUser loadUser(OidcUserRequest userRequest) throws OAuth2AuthenticationException {
+        log.debug("userRequest={}", userRequest);
         OidcUser user = super.loadUser(userRequest);
-
         // TODO : ExtendedUser 를 생성을 보장한다.
         log.debug("loadUser OidcUser={}", user.toString());
-
         return user;
     }
 }

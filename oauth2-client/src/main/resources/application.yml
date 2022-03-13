@@ -15,12 +15,14 @@ spring:
           kakao:
             client-id: 050cc30618bf0988f3d82f6c620f85b8
             client-secert: xMksiOIxLOMgCVDh8g8wH97IQ2fSLjs1
-            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
             authorization-grant-type: authorization_code
             client-name: kakao
           naver:
-            client-id: OVtjSYcQ2dHY2RPHSmIH
-            client-secret: SrR8XPUPl1
+            #            client-id: OVtjSYcQ2dHY2RPHSmIH
+            #            client-secret: SrR8XPUPl1
+            client-id: FgnDPDIRuDH4l3uyvZ9Q
+            client-secret: Z6jWVKekJ4
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
             authorization-grant-type: authorization_code
             client-name: naver
@@ -41,6 +43,6 @@ logging:
     root: INFO
     org.springframework.web: INFO
     org.springframework.security: INFO
-    org.springframework.security.oauth2: INFO
+    org.springframework.security.oauth2: DEBUG
     #    org.springframework.boot.autoconfigure: DEBUG
     com.sp.sec: DEBUG

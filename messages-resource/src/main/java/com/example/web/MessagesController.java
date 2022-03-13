@@ -12,7 +12,9 @@ public class MessagesController {
 
     @GetMapping("/messages")
     public String[] getMessages(Principal principal) {
+        System.out.println(principal.toString());
         log.debug("@GetMapping messages getMessages=" + principal.toString());
+
         return new String[]{"Message 1", "Message 2", "Message 3"};
     }
 }

@@ -13,11 +13,10 @@ public class SpOAuth2UserService extends DefaultOAuth2UserService {
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
+        log.debug("userRequest={}", userRequest.toString());
         OAuth2User user = super.loadUser(userRequest);
-
         // TODO : ExtendedUser 로 바꾼뒤 리턴한다.
         log.debug("loadUser OAuth2User={}", user.toString());
-
         return user;
     }
 }
