@@ -2,6 +2,8 @@ server:
   port: 9000
 
 logging:
+  #  pattern:
+  #    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
   level:
     root: INFO
     org.springframework.web: INFO

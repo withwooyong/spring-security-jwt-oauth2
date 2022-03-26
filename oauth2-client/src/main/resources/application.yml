@@ -13,9 +13,10 @@ spring:
             client-id: 488695445381590
             client-secret: bcbbc8a3a1d98bedeb258b318878e745
           kakao:
-            client-id: 050cc30618bf0988f3d82f6c620f85b8
-            client-secert: xMksiOIxLOMgCVDh8g8wH97IQ2fSLjs1
+            client-id: 095275de3a8b2db830c7bd237e534026
+            client-secret: xMksiOIxLOMgCVDh8g8wH97IQ2fSLjs1
             redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+            client-authentication-method: POST
             authorization-grant-type: authorization_code
             client-name: kakao
           naver:

@@ -2,6 +2,9 @@ server:
   port: 9000
 
 logging:
+  #  config: classpath:log4j2-local.yml
+  #  pattern:
+  #    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
   level:
     root: INFO
     org.springframework.web: INFO
@@ -21,5 +24,19 @@ spring:
         format_sql: true
         ddl-auto: create
     show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 108050356439-ah0csttecetisk4q4pa0777de6kf0quf.apps.googleusercontent.com
+            client-secret: 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
+    #            client-id: 377825014181-2tpha7niq0hjar86e4j8h6dl0h8j1s3i.apps.googleusercontent.com
+    #            client-secret: yyHXhXWBRrx3jyDWrhiSwzu8
+    data:
+      mongodb:
+        database: google-client
+        host: localhost
+        port: 27017
 
 

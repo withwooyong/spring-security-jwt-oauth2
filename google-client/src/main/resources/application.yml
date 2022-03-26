@@ -18,6 +18,8 @@ spring:
 
 #http://localhost:8080/auth/realms/company-services/broker/google/endpoint
 logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
   level:
     root: INFO
     org.springframework.web: INFO
